@@ -1,0 +1,56 @@
+{
+    "$id": "http://blabla.com/schemas/v1/user.schema.json",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "A user",
+    "type": "object",
+    "properties": {
+      "traits": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "title": "E-Mail",
+            "type": "string",
+            "format": "email",
+              "ory.sh/kratos": {
+              "credentials": {
+                "password": {
+                  "identifier": true
+                }
+              }
+            }
+          },
+          "phone": {
+            "title": "Phone",
+            "type": "string",
+            "format": "tel",
+              "ory.sh/kratos": {
+              "credentials": {
+                "password": {
+                  "identifier": true
+                }
+              }
+            }
+          },
+          "name": {
+            "type": "object",
+            "properties": {
+              "first": {
+                "type": "string"
+              },
+              "last": {
+                "type": "string"
+              }
+            }
+          },
+          "other_id": {
+            "type": "string"
+          }
+        },
+        "required": ["email"],
+        "additionalProperties": false
+      }
+    }
+  }
+  
+  
+  
